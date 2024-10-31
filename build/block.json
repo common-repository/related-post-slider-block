@@ -1,0 +1,174 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "rpsb/related-post-slider-block",
+	"version": "1.0.2",
+	"title": "Related Post Slider Block",
+	"category": "widgets",
+	"icon": "list-view",
+	"description": "A truly WYSIWYG, responsive and dynamic related post carousel slider Gutenberg block",
+	"supports": {
+		"html": false,
+		"align": ["full", "wide"]
+	},
+	"attributes": {
+		"display": {
+			"type": "object",
+			"default": {
+				"displayFeaturedImage": true,
+				"displayCategory": true,
+				"displayMeta": true,
+				"displayExcerpt": true,
+				"displayDotsIndicator": true,
+				"displayArrowsIndicator": true,
+				"displayReverseOrder": false
+			}
+		},
+		"excerptLength": {
+			"type": "number",
+			"default": 125
+		},
+		"totalPostsToShow": {
+			"type": "integer",
+			"default": 9
+		},
+		"postsPerSlide": {
+			"type": "integer",
+			"default": 4
+		},
+		"breakpoints": {
+			"type": "array",
+			"default": [
+				{
+					"device": "desktop",
+					"breakpointSettings": {
+						"breakpoint": 1024,
+						"settings": {
+							"slidesToShow": 3,
+							"slidesToScroll": 1,
+							"infinite": true,
+							"dots": true
+						}
+					}
+				},
+				{
+					"device": "tablet",
+					"breakpointSettings": {
+						"breakpoint": 768,
+						"settings": {
+							"slidesToShow": 2,
+							"slidesToScroll": 1,
+							"infinite": true,
+							"dots": true
+						}
+					}
+				},
+				{
+					"device": "mobile",
+					"breakpointSettings": {
+						"breakpoint": 480,
+						"settings": {
+							"slidesToShow": 1,
+							"slidesToScroll": 1,
+							"infinite": true
+						}
+					}
+				}
+			]
+		},
+		"carouselPadding": {
+			"type": "object",
+			"default": {
+				"top": "30px",
+				"right": "30px",
+				"bottom": "30px",
+				"left": "30px"
+			}
+		},
+		"carouselMargin": {
+			"type": "object",
+			"default": {
+				"top": "50px",
+				"bottom": "50px"
+			}
+		},
+		"itemPadding": {
+			"type": "object",
+			"default": {
+				"top": "10px",
+				"right": "10px",
+				"bottom": "10px",
+				"left": "10px"
+			}
+		},
+		"itemMargin": {
+			"type": "object",
+			"default": {
+				"top": "30px",
+				"right": "30px",
+				"bottom": "30px",
+				"left": "30px"
+			}
+		},
+		"linkSlideItemBorder": {
+			"type": "boolean",
+			"default": true
+		},
+		"flatSlideItemBorder": {
+			"type": "object",
+			"default": {
+				"color": "transparent",
+				"style": "none",
+				"width": "0"
+			}
+		},
+		"splittedSlideItemBorder": {
+			"type": "object",
+			"default": {
+				"top": {
+					"color": "transparent",
+					"style": "none",
+					"width": "0"
+				},
+				"right": {
+					"color": "transparent",
+					"style": "none",
+					"width": "0"
+				},
+				"bottom": {
+					"color": "transparent",
+					"style": "none",
+					"width": "0"
+				},
+				"left": {
+					"color": "transparent",
+					"style": "none",
+					"width": "0"
+				}
+			}
+		},
+		"slideItemBorderRadius": {
+			"type": "object",
+			"default": {
+				"top": "0",
+				"right": "0",
+				"bottom": "0",
+				"left": "0"
+			}
+		},
+		"slideItemShadow": {
+			"type": "object",
+			"default": {
+				"offsetX": 0,
+				"offsetY": 24,
+				"blurRadius": 48,
+				"spreadRadius": 0,
+				"shadowColor": "rgba(193,203,220,0.4)"
+			}
+		}
+	},
+	"textdomain": "related-post-slider-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./index.css"
+}
